@@ -1,0 +1,17 @@
+{
+  "name": "BrowseNest",
+  "description": "The Chrome extension for spontaneous news updates. Effortlessly stay informed with random news directly in your browser.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "icons": {
+    "128": "./icons/news.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "BrowseNest"
+  },
+  
+  "host_permissions": ["http://*/*", "https://*/*"],
+
+  "permissions": ["activeTab", "storage"]
+}
