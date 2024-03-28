@@ -30,10 +30,10 @@ function displayArticle(element) {
 document.getElementById("news").addEventListener("click", async () => {
   try {
     response = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`
+      `https://newsapi.org/v2/top-headlines?country=in&pageSize=100&apiKey=${apiKey}`
     );
     articles = await response.json();
-    displayArticle(articles.articles[Math.ceil(Math.random() * 20)]);
+    displayArticle(articles.articles[Math.ceil(Math.random() * articles.totalResults)]);
   } catch (err) {
     console.log(err);
   }
